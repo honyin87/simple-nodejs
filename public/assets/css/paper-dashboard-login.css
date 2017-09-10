@@ -1,0 +1,81 @@
+.wrapper-full-page{
+  min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -70px;
+}
+
+.wrapper-full-page .footer{
+  height: 70px;
+  margin-top: -70px;
+}
+
+.card .card-footer {
+    padding: 0 15px 15px;
+}
+
+.login-page > .content, .lock-page > .content {
+    padding-top: 8vh;
+}
+
+.full-page:after, .full-page:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.full-page:after {
+  background: #5e5e5e;
+  z-index: 3;
+  opacity: 1;
+}
+.full-page > .content,
+.full-page > .footer,
+.navbar {
+  position: relative;
+  z-index: 4;
+}
+
+.full-page .full-page-background {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+}
+.full-page[data-image]:after, .full-page.has-image:after {
+  opacity: .7;
+}
+.full-page[data-color="blue"]:after {
+  background-color: rgba(96, 133, 134, 0.7);
+}
+.full-page[data-color="azure"]:after {
+  background-color: rgba(68, 160, 185, 0.7);
+}
+.full-page[data-color="green"]:after {
+  background-color: rgba(87, 178, 127, 0.7);
+}
+.full-page[data-color="orange"]:after {
+  background-color: rgba(240, 169, 21, 0.7);
+}
+.full-page[data-color="red"]:after {
+  background-color: rgba(205, 71, 19, 0.7);
+}
+.footer nav > ul a:not(.btn),
+.footer .copyright,
+.footer .copyright a {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+body .footer{
+  z-index:4;
+}
+
