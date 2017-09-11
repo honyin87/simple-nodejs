@@ -10,15 +10,26 @@ var session = require('client-sessions');
 var dotenv = require('dotenv');
 dotenv.load();
 
-var index = require('./routes/index');
-var users = require('./routes/users');
 
 //Project Custom
+const Youch = require('youch');
+var mongo = require('mongoskin');
+var bcrypt = require('bcrypt-nodejs');
+
+//MongoDB
+global.db || (global.db = mongo.db(process.env.DB_URI, {native_parser:true}));
+//bcrypt
+global.bcrypt || (global.bcrypt = bcrypt);
+
+//routes
+var index = require('./routes/index');
+var users = require('./routes/users');
 var dashboard = require('./routes/dashboard');
 var login = require('./routes/login');
-const Youch = require('youch');
 
 var app = express();
+
+
 
 // Set JsRender as the template engine for Express - for .html files
 app.engine('html', jsrender.__express);

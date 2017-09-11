@@ -6,6 +6,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	console.log("User ID: "+req.session.user);
+
 	if(req.session.user){
 		
 		console.log("session reset");

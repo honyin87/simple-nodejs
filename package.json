@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.2",
     "client-sessions": "^0.8.0",
     "cookie-parser": "~1.4.3",
@@ -14,6 +15,7 @@
     "express": "~4.14.0",
     "jade": "~1.11.0",
     "jsrender": "^0.9.88",
+    "mongoskin": "^2.1.0",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
     "youch": "^2.0.5"
