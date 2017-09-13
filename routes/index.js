@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 	if(req.session.user){
 		
 		console.log("session reset");
-		req.session.destroy();
+		//req.session.destroy();
 		console.log("session reset "+req.session.user);
 
 		res.redirect('/dashboard');
