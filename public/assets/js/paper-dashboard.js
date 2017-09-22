@@ -25,6 +25,8 @@ $(document).ready(function(){
     // Init navigation toggle for small screens
     if(window_width <= 991){
         pd.initRightMenu();
+    }else{
+        initialSidebarToggle();
     }
 
     //  Activate the tooltips
@@ -36,6 +38,8 @@ $(document).ready(function(){
 $(window).resize(function(){
     if($(window).width() <= 991){
         pd.initRightMenu();
+    }else{
+        initialSidebarToggle();
     }
 });
 
@@ -132,6 +136,21 @@ pd = {
                 }
             });
             navbar_initialized = true;
+
+            //custom method
+            $( "ul.navbar-nav a" ).each(function() {
+              var element = $( this );
+              
+              element.on("click", function(){
+                    console.log(123);
+                    var url = $( this ).data('url');
+                    var target = $( this ).data('target');
+                    console.log('triggered');
+                    removeSideMenuActiveClass();
+                    $( this ).parent().addClass("active");
+                    $( target ).simpleGoTo(url);
+                });
+            });
         }
 
     }
@@ -155,3 +174,11 @@ function debounce(func, wait, immediate) {
 		if (immediate && !timeout) func.apply(context, args);
 	};
 };
+
+
+function removeSideMenuActiveClass(){
+    $( "ul.navbar-nav .active" ).each(function() {
+        var element = $( this );
+        element.removeClass("active");
+    });
+}
