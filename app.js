@@ -22,12 +22,7 @@ global.db || (global.db = mongo.db(process.env.DB_URI, {native_parser:true}));
 global.bcrypt || (global.bcrypt = bcrypt);
 
 //routes
-var index = require('./routes/index');
-var users = require('./routes/users');
-var dashboard = require('./routes/dashboard');
-var login = require('./routes/login');
-var logout = require('./routes/logout');
-var userDetail = require('./routes/user-detail');
+var routes = require('./routes/routes');
 
 var app = express();
 
@@ -57,12 +52,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/login', login);
-app.use('/users', users);
-app.use('/dashboard',dashboard);
-app.use('/logout',logout);
-app.use('/userdetail', userDetail);
+/*
+ * Route start here
+ */
+app.use('/',routes);
+
+/*
+ * Route end
+ */
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -3,7 +3,9 @@
     
     $.fn.simpleGoTo = function(url){
         var base = this;
-        base.parent().parent().LoadingOverlay("show");
+        base.parent().parent().LoadingOverlay("show",{
+            image: "images/load.svg"
+        });
             $.get(url, function (result) {
                 /*console.log(result);
                 base.empty();
@@ -16,6 +18,21 @@
             });
         return this;
     };
+
+/**
+ * Generic method to initialize every page onload, when have "a href" link 
+ */
+    $.fn.initGoTo = function(){
+        var base = this;
+        var link = base.find('a');
+
+        link.on("click", function(){
+            var url = $( this ).data('url');
+            var target = $( this ).data('target');
+            
+            $( target ).simpleGoTo(url);
+        });
+    }
     
 })(jQuery);
 
@@ -32,7 +49,7 @@
       element.on("click", function(){
             var url = $( this ).data('url');
             var target = $( this ).data('target');
-            console.log('triggered');
+            
             removeMenuActiveClass();
             $( this ).parent().addClass("active");
             $( target ).simpleGoTo(url);

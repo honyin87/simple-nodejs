@@ -6,7 +6,7 @@
 	}
 
 	.wrapper .sidebar .sidebar-wrapper.sidebar-wide{
-		width:0px;
+		left:0px;
 	}
 
 	.main-panel.sidebar-wide{
@@ -25,10 +25,16 @@
 		background-color:transparent;
 	}
 
-.wrapper .sidebar{
-	left: 0px;
-	transition: 0.5s;
+.wrapper .sidebar .sidebar-wrapper{
+	-webkit-transition: left 0.5s;
+  	-moz-transition: left 0.5s;
+  	-o-transition: left 0.5s;
+	transition: left 0.5s;
 }
-.main-panel {
-    transition: width .5s;
+
+.main-panel{
+	-webkit-transition: width 0.5s;
+  	-moz-transition: width 0.5s;
+  	-o-transition: width 0.5s;
+	transition: width 0.5s;
 }
