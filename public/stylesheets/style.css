@@ -38,3 +38,95 @@
   	-o-transition: width 0.5s;
 	transition: width 0.5s;
 }
+
+.sidebar .sidebar-wrapper .nav .caret {
+    float: right;
+    position: relative;
+    top: -15px;
+}
+
+a[data-toggle="collapse"][aria-expanded="true"] .caret, .btn[data-toggle="collapse"][aria-expanded="true"] .caret, a.dropdown-toggle[aria-expanded="true"] .caret {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"]):before {
+    border-right: 17px solid #cfcfca;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    top: 3px;
+    transition: opacity 150ms ease-in;
+  }
+  .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"]):after {
+    border-right: 17px solid #f4f3ef;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -1px;
+    opacity: 1;
+    top: 3px;
+    transition: opacity 150ms ease-in;
+  }
+
+  .sidebar .user .photo,
+  .off-canvas-sidebar .user .photo{
+    width: 34px;
+    height: 34px;
+    float: left;
+    margin-right: 11px;
+    z-index: 5;
+    margin-left: 3px;
+    overflow: hidden;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(102, 97, 91, 0.3);
+}
+.sidebar .user .photo img ,
+.off-canvas-sidebar .user .photo img{
+    width: 100%;
+}
+.sidebar .user .info > a > span,
+.off-canvas-sidebar .user .info > a > span {
+    opacity: 1;
+    line-height: 30px;
+    display: block;
+    position: relative;
+    color: #66615B;
+}
+.sidebar .user .info > a:hover > span,
+.off-canvas-sidebar .user .info > a:hover > span {
+	color: #EB5E28;;
+}
+
+.sidebar .user{
+    margin: 0 20px;
+}
+.off-canvas-sidebar .user {
+    margin: 0px;
+}
+
+.sidebar .user{
+	padding-bottom: 18px;
+	border-bottom: 1px solid rgba(102, 97, 91, 0.3);
+}
+
+.sidebar .collapse .nav,
+.sidebar .collapsing .nav{
+	margin-top: 0px;
+}
+
+.off-canvas-sidebar .collapse .nav li.active > a:not([data-toggle="collapse"]):before,
+.off-canvas-sidebar .collapse .nav li.active > a:not([data-toggle="collapse"]):after{
+	margin: -8px -29px;
+}

@@ -276,8 +276,8 @@ hr {
     .off-canvas-sidebar .nav li.active > a {
       color: #7A9E9F;
       opacity: 1; }
-      .sidebar .nav li.active > a:before,
-      .off-canvas-sidebar .nav li.active > a:before {
+      .sidebar .nav li.active > a:not([data-toggle="collapse"]):before,
+      .off-canvas-sidebar .nav li.active > a:not([data-toggle="collapse"]):before {
         border-right: 17px solid #DDDDDD;
         border-top: 17px solid transparent;
         border-bottom: 17px solid transparent;
@@ -286,8 +286,8 @@ hr {
         position: absolute;
         right: 0;
         top: 8px; }
-      .sidebar .nav li.active > a:after,
-      .off-canvas-sidebar .nav li.active > a:after {
+      .sidebar .nav li.active > a:not([data-toggle="collapse"]):after,
+      .off-canvas-sidebar .nav li.active > a:not([data-toggle="collapse"]):after {
         border-right: 17px solid #f4f3ef;
         border-top: 17px solid transparent;
         border-bottom: 17px solid transparent;

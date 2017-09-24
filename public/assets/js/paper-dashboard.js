@@ -89,7 +89,15 @@ pd = {
 
             // add the content from the sidebar to the right menu
             content_buff = $sidebar.find('.nav').html();
-            ul_content = ul_content + '<li class="divider"></li>'+ content_buff;
+            $content = $('<ul class="nav navbar-nav">' + content_buff + '</ul>');
+            $content.find('.user').remove();
+            content_buff = $content.html();
+            //console.log(content_buff);
+            
+            //find user element and place on top section of sidebar
+            user_content = '<div class="user">' + $sidebar.find('.user').html() + '</div>';
+
+            ul_content =  user_content + '<li class="divider"></li>' + ul_content + '<li class="divider"></li>'+ content_buff;
 
             ul_content = '<ul class="nav navbar-nav">' + ul_content + '</ul>';
 
@@ -105,6 +113,7 @@ pd = {
              $off_canvas_sidebar.find('a').removeClass('btn btn-round btn-default');
              $off_canvas_sidebar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
              $off_canvas_sidebar.find('button').addClass('btn-simple btn-block');
+             renameMenuID($off_canvas_sidebar);
 
              $toggle.click(function (){
                 if(pd.misc.navbar_menu_visible == 1) {
@@ -142,10 +151,10 @@ pd = {
               var element = $( this );
               
               element.on("click", function(){
-                    console.log(123);
+                    
                     var url = $( this ).data('url');
                     var target = $( this ).data('target');
-                    console.log('triggered');
+                    
                     removeSideMenuActiveClass();
                     $( this ).parent().addClass("active");
                     $( target ).simpleGoTo(url);
@@ -180,5 +189,19 @@ function removeSideMenuActiveClass(){
     $( "ul.navbar-nav .active" ).each(function() {
         var element = $( this );
         element.removeClass("active");
+    });
+}
+
+function renameMenuID($target){
+    $target.find('a[data-toggle="collapse"]').each(function(){
+        $(this).attr('href',$(this).attr('href')+'-off');
+        
+        $parent = $(this).parent();
+
+        $child = $parent.find('div.collapse').first();
+        //console.log($child.attr('id'));
+        $child.attr('id',$child.attr('id')+'-off');
+
+
     });
 }
