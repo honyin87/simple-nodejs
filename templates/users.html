@@ -1,34 +1,92 @@
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="header">
-                                <h4 class="title">User List</h4>
-                                <p class="category"></p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-striped user-list">
-                                    <thead>
-                                        <th>User ID</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                    </thead>
-                                    <tbody>
-                                        {{for users}}
-                                        <tr>
-                                            <td>
-                                                <a href="#" data-url="/user-detail/{{:userID}}" data-target="#main-content">
-                                                {{:userID}}
-                                                </a>
-                                            </td>
-                                            <td>{{:first_name}}</td>
-                                            <td>{{:last_name}}</td>
-                                        </tr>
-                                        {{/for}}
-                                    </tbody>
-                                </table>
+                            <div class="card-content">
+                                <div class="header">
+                                    <h4 class="title">User List</h4>
+                                    <p class="category"></p>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+                                    <table class="table table-striped user-list"
+                                    data-toggle="table"
+                                    data-search="true"
+                                    data-show-refresh="true"
+                                    data-show-columns="true"
+                                    data-sort-name="userID"
+                                    data-unique-id="userID"
+                                    data-sort-order="asc"
+                                    data-show-export="true"
+                                    data-pagination="true"
+                                    data-url="/user-list"
+                                    data-search="true"
+                                    >
+                                        <thead>
+                                            <th data-field="userID" 
+                                                data-sortable="true">
+                                                User ID
+                                            </th>
+                                            <th data-field="first_name" 
+                                                data-sortable="true">
+                                                First Name
+                                            </th>
+                                            <th data-field="last_name" 
+                                                data-sortable="true">
+                                                Last Name
+                                            </th>
+                                            <th data-field="actions" 
+                                                class="td-actions text-right" 
+                                                data-formatter="operateFormatter">
+                                                Actions
+                                            </th>
+                                        </thead>
+                                    </table>
 
-                            </div>
+                                </div>
                         </div>
                     </div>
+                    </div>
                     <script>
-                        $('.user-list').initGoTo();
+                        opt = {icons: {
+                                        refresh: 'fa fa-refresh',
+                                        toggle: 'fa fa-th-list',
+                                        columns: 'fa fa-columns',
+                                        detailOpen: 'fa fa-plus-circle',
+                                        detailClose: 'ti-close'
+                                    },
+                                searchAlign: 'left',
+
+                                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                                    //do nothing here, we don't want to show the text "showing x of y from..."
+                                },
+                                formatRecordsPerPage: function(pageNumber){
+                                    return pageNumber + " rows visible";
+                                },
+                            };
+
+
+                        $('.user-list').bootstrapTable(opt).
+                        on('load-success.bs.table', function (e, data) {
+                            $('.user-list').initGoTo();
+                        });
+                        
+
+                        $(window).resize(function () {
+                            $('.user-list').bootstrapTable('resetView');
+                        });
+
+                        function operateFormatter(value, row, index) {
+                            console.log(row.userID);
+                            return [
+                                '<div class="table-icons">',
+                                    '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)" data-url="/user-detail/'+row.userID+'" data-target="#main-content" >',
+                                        '<i class="ti-image"></i>',
+                                    '</a>',
+                                    '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+                                        '<i class="ti-pencil-alt"></i>',
+                                    '</a>',
+                                    '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+                                        '<i class="ti-close"></i>',
+                                    '</a>',
+                                '</div>',
+                            ].join('');
+                        }
                     </script>
