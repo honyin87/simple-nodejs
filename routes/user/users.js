@@ -5,8 +5,8 @@ var auth = require('./../../modules/auth');
 /* GET dashboard page */
 router.get('/', auth , function(req, res, next) {
 
-	res.render('users');
-  
+	res.render('user/users');
+
 });
 
 module.exports = router;

@@ -18,6 +18,8 @@
                                     data-pagination="true"
                                     data-url="/user-list"
                                     data-search="true"
+                                    data-toolbar="#toolbar"
+                                    data-toolbar-align='right'
                                     >
                                         <thead>
                                             <th data-field="userID" 
@@ -44,6 +46,12 @@
                         </div>
                     </div>
                     </div>
+
+                    <div id="toolbar" class="btn-group">
+                        <button type="button" class="btn btn-default">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
                     <script>
                         opt = {icons: {
                                         refresh: 'fa fa-refresh',
@@ -64,7 +72,7 @@
 
 
                         $('.user-list').bootstrapTable(opt).
-                        on('load-success.bs.table', function (e, data) {
+                        on('all.bs.table', function (e, data) {
                             $('.user-list').initGoTo();
                         });
                         
@@ -74,7 +82,7 @@
                         });
 
                         function operateFormatter(value, row, index) {
-                            console.log(row.userID);
+                            //console.log(row.userID);
                             return [
                                 '<div class="table-icons">',
                                     '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)" data-url="/user-detail/'+row.userID+'" data-target="#main-content" >',

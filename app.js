@@ -21,6 +21,10 @@ global.db || (global.db = mongo.db(process.env.DB_URI, {native_parser:true}));
 //bcrypt
 global.bcrypt || (global.bcrypt = bcrypt);
 
+/*bcrypt.hash('123', null, null, function(err, hash) {
+  console.log('hashing...'+hash );
+ });*/
+
 //routes
 var routes = require('./routes/routes');
 

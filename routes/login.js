@@ -7,7 +7,6 @@ var router = express.Router();
 /* POST login info */
 router.post('/', function(req, res, next) {
 
-
 	var user = db.collection('users').findOne({userID:req.body.userid},function(err,user){
 		
 		  if (validatePassword(req.body.password, user.password)) {
@@ -27,5 +26,7 @@ router.post('/', function(req, res, next) {
 function validatePassword(password,hash){
 	return bcrypt.compareSync(password, hash);
 }
+
+
 
 module.exports = router;
