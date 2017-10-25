@@ -8,6 +8,7 @@ var login = require('./login');
 var logout = require('./logout');
 var userDetail = require('./user/user-detail');
 var userList = require('./user/user-list');
+var invalidSession = require('./invalid-session');
 
 router.use('/', index);
 router.use('/login', login);
@@ -16,5 +17,6 @@ router.use('/dashboard', dashboard);
 router.use('/users', users);
 router.use('/user-detail', userDetail);
 router.use('/user-list', userList);
+router.use('/invalid-session', invalidSession);
 
 module.exports = router;
