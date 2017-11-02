@@ -1,0 +1,62 @@
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /dashboard HTTP/1.1" 200 9242 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/bootstrap-table.min.css HTTP/1.1" 200 5603 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/jquery-ui.min.css HTTP/1.1" 200 30747 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/animate.min.css HTTP/1.1" 200 55523 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/demo.css HTTP/1.1" 200 1245 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/bootstrap.min.css HTTP/1.1" 200 122540 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/paper-dashboard.css HTTP/1.1" 200 96690 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/font-awesome.min.css HTTP/1.1" 200 31000 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/css/themify-icons.css HTTP/1.1" 200 16454 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /stylesheets/style.css HTTP/1.1" 200 11717 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/jquery-3.2.1.min.js HTTP/1.1" 200 86659 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/jquery-ui.min.js HTTP/1.1" 200 253668 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 36816 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/bootstrap-checkbox-radio.js HTTP/1.1" 200 6978 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/bootstrap-table.min.js HTTP/1.1" 200 53581 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/chartist.min.js HTTP/1.1" 200 36026 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/bootstrap-notify.js HTTP/1.1" 200 13213 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/paper-dashboard.js HTTP/1.1" 200 7055 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/js/demo.js HTTP/1.1" 200 9745 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /javascripts/loadingoverlay.min.js HTTP/1.1" 200 17472 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /javascripts/simple-nodejs.js HTTP/1.1" 200 2276 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /javascripts/simple-utils.js HTTP/1.1" 200 677 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:18 +0000] "GET /assets/img/faces/face-2.jpg HTTP/1.1" 200 55860 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:19 +0000] "GET /assets/fonts/themify.woff?-fvbane HTTP/1.1" 200 56108 "http://localhost:3000/assets/css/themify-icons.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:19 +0000] "GET /assets/js/chartist.min.js.map HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:23 +0000] "GET /images/load.svg HTTP/1.1" 200 1362 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:23 +0000] "GET /users HTTP/1.1" 200 5490 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:23 +0000] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160 "http://localhost:3000/assets/css/font-awesome.min.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:26 +0000] "GET /user-list?sort=userID&order=asc&offset=0&limit=10 HTTP/1.1" 200 428 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:29 +0000] "GET /user-detail/admin HTTP/1.1" 200 3733 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:30 +0000] "GET /user-detail/admin HTTP/1.1" 200 3733 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:31 +0000] "GET /user-detail/admin HTTP/1.1" 200 3733 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+::1 - - [29/Oct/2017:11:03:31 +0000] "GET /user-detail/admin HTTP/1.1" 200 3733 "http://localhost:3000/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
+[0mGET /dashboard [32m200 [0m31.427 ms - 9242[0m
+[0mGET /assets/css/jquery-ui.min.css [32m200 [0m8.530 ms - 30747[0m
+[0mGET /assets/css/bootstrap.min.css [32m200 [0m2.642 ms - 122540[0m
+[0mGET /assets/css/bootstrap-table.min.css [32m200 [0m1.545 ms - 5603[0m
+[0mGET /assets/css/animate.min.css [32m200 [0m2.634 ms - 55523[0m
+[0mGET /assets/css/paper-dashboard.css [32m200 [0m2.997 ms - 96690[0m
+[0mGET /assets/css/demo.css [32m200 [0m1.706 ms - 1245[0m
+[0mGET /assets/css/font-awesome.min.css [32m200 [0m4.126 ms - 31000[0m
+[0mGET /assets/css/themify-icons.css [32m200 [0m4.702 ms - 16454[0m
+[0mGET /stylesheets/style.css [32m200 [0m4.445 ms - 11717[0m
+[0mGET /assets/js/jquery-3.2.1.min.js [32m200 [0m2.538 ms - 86659[0m
+[0mGET /assets/js/jquery-ui.min.js [32m200 [0m1.576 ms - 253668[0m
+[0mGET /assets/js/bootstrap.min.js [32m200 [0m2.676 ms - 36816[0m
+[0mGET /assets/js/bootstrap-checkbox-radio.js [32m200 [0m1.369 ms - 6978[0m
+[0mGET /assets/js/bootstrap-table.min.js [32m200 [0m1.980 ms - 53581[0m
+[0mGET /assets/js/chartist.min.js [32m200 [0m1.681 ms - 36026[0m
+[0mGET /assets/js/bootstrap-notify.js [32m200 [0m2.527 ms - 13213[0m
+[0mGET /assets/js/paper-dashboard.js [32m200 [0m4.880 ms - 7055[0m
+[0mGET /assets/js/demo.js [32m200 [0m2.223 ms - 9745[0m
+[0mGET /javascripts/loadingoverlay.min.js [32m200 [0m1.277 ms - 17472[0m
+[0mGET /javascripts/simple-nodejs.js [32m200 [0m1.801 ms - 2276[0m
+[0mGET /javascripts/simple-utils.js [32m200 [0m1.614 ms - 677[0m
+[0mGET /assets/img/faces/face-2.jpg [32m200 [0m4.006 ms - 55860[0m
+[0mGET /assets/fonts/themify.woff?-fvbane [32m200 [0m1.136 ms - 56108[0m
+[0mGET /assets/js/chartist.min.js.map [32m200 [0m110.348 ms - -[0m
+[0mGET /images/load.svg [32m200 [0m1.424 ms - 1362[0m
+[0mGET /users [32m200 [0m8.487 ms - 5490[0m
+[0mGET /assets/fonts/fontawesome-webfont.woff2?v=4.7.0 [32m200 [0m2.239 ms - 77160[0m
+[0mGET /user-list?sort=userID&order=asc&offset=0&limit=10 [32m200 [0m2068.584 ms - 428[0m

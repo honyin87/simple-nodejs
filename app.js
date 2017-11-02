@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var jsrender = require('jsrender');
 var session = require('client-sessions');
 
+
 var dotenv = require('dotenv');
 dotenv.load();
 
@@ -16,8 +17,10 @@ const Youch = require('youch');
 var mongo = require('mongoskin');
 var bcrypt = require('bcrypt-nodejs');
 
+
 //MongoDB
 global.db || (global.db = mongo.db(process.env.DB_URI, {native_parser:true}));
+global.mongo || (global.mongo = mongo);
 //bcrypt
 global.bcrypt || (global.bcrypt = bcrypt);
 
@@ -50,6 +53,7 @@ app.set('views', __dirname + '/templates');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// create a write stream (in append mode)
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -79,9 +83,9 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  
+
   //To check server environment,
-  // if is development, use 'youch' to display UI friendly error page. 
+  // if is development, use 'youch' to display UI friendly error page.
   if(process.env.ENV === 'development'){
 	  const youch = new Youch(err, req);
 	  youch
@@ -100,7 +104,7 @@ app.use(function(err, req, res, next) {
   		}else{
   			res.render('error/500');
   		}
-  		
+
    }
 });
 

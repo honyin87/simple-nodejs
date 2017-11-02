@@ -7,6 +7,8 @@
 var app = require('../app');
 var debug = require('debug')('simple-nodejs:server');
 var http = require('http');
+var cluster = require('cluster');
+
 
 /**
  * Get port from environment and store in Express.
@@ -21,6 +23,20 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
+if (cluster.isMaster) {
+    // Count the machine's CPUs
+    var cpuCount = require('os').cpus().length;
+
+    // Create a worker for each CPU
+    for (var i = 0; i < cpuCount; i += 1) {
+        cluster.fork();
+    }
+    console.log("Master process cpu count:"+cpuCount);
+}else{
+
+  server = http.createServer(app);
+
+
 /**
  * Listen on provided port, on all network interfaces.
  */
@@ -28,6 +44,7 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+}
 
 /**
  * Normalize a port into a number, string, or false.

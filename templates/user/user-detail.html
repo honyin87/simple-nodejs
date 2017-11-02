@@ -1,22 +1,28 @@
- <div class="col-lg-8 col-md-7">
+ <div class="col-lg-10 col-md-10">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Edit User</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form class='form' method="POST" data-action="/user-update">
                                     <div class="row">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="userID">Username</label>
                                                 <input type="text" name="userID" class="form-control border-input" placeholder="Username" value="{{:userID}}">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                     <label for="password" >Password</label>
                                                 <input type="password" name="password" class="form-control border-input" placeholder="Password" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                    <label for="email" >Email</label>
+                                                <input type="text" name="email" class="form-control border-input" placeholder="Email" value="{{:email}}">
                                             </div>
                                         </div>
                                     </div>
@@ -50,6 +56,7 @@
                     </div>
                     <script>
                       $(function() {
-                        $('form').initGoTo();
+                        $('.form').initGoTo();
+                        $('.form').initPost();
                       });
                     </script>
