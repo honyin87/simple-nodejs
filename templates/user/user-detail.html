@@ -1,32 +1,35 @@
- <div class="col-lg-10 col-md-10">
+ <div class="col-lg-8 col-md-8 col-md-offset-2">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Edit User</h4>
+                                <h4 class="title">User - {{:pageMode}}</h4>
                             </div>
                             <div class="content">
                                 <form class='form' method="POST" data-action="/user-update">
+                                    <input type="hidden" name="pageMode" value="{{:pageMode}}" />
                                     <div class="row">
-
-                                        <div class="col-md-4">
+                                      <div class="center">
+                                        <a href="#" class="">
+                                          <div class="profile-pic" style="background-image: url('../assets/img/faces/face-2.jpg')" >
+                                              <i class="fa fa-camera" aria-hidden="true"></i>
+                                              <span>Change Image</span>
+                                          </div>
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="userID">Username</label>
                                                 <input type="text" name="userID" class="form-control border-input" placeholder="Username" value="{{:userID}}">
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                     <label for="password" >Password</label>
                                                 <input type="password" name="password" class="form-control border-input" placeholder="Password" value="">
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                    <label for="email" >Email</label>
-                                                <input type="text" name="email" class="form-control border-input" placeholder="Email" value="{{:email}}">
-                                            </div>
-                                        </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -41,7 +44,14 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                                  <label for="email" >Email</label>
+                                              <input type="text" name="email" class="form-control border-input" placeholder="Email" value="{{:email}}">
+                                          </div>
+                                      </div>
+                                    </div>
 
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>

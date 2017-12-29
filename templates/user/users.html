@@ -22,20 +22,20 @@
                                     data-toolbar-align='right'
                                     >
                                         <thead>
-                                            <th data-field="userID" 
+                                            <th data-field="userID"
                                                 data-sortable="true">
                                                 User ID
                                             </th>
-                                            <th data-field="first_name" 
+                                            <th data-field="first_name"
                                                 data-sortable="true">
                                                 First Name
                                             </th>
-                                            <th data-field="last_name" 
+                                            <th data-field="last_name"
                                                 data-sortable="true">
                                                 Last Name
                                             </th>
-                                            <th data-field="actions" 
-                                                class="td-actions text-right" 
+                                            <th data-field="actions"
+                                                class="td-actions text-right"
                                                 data-formatter="operateFormatter">
                                                 Actions
                                             </th>
@@ -48,9 +48,9 @@
                     </div>
 
                     <div id="toolbar" class="btn-group">
-                        <button type="button" class="btn btn-default">
+                        <a href="javascript:void(0)" title="Add" class="btn btn-default" data-url="/user-detail/add/0" data-target="#main-content">
                             <i class="fa fa-plus"></i>
-                        </button>
+                        </a>
                     </div>
                     <script>
                         opt = {icons: {
@@ -75,7 +75,7 @@
                         on('all.bs.table', function (e, data) {
                             $('.user-list').initGoTo();
                         });
-                        
+
 
                         $(window).resize(function () {
                             $('.user-list').bootstrapTable('resetView');
@@ -85,16 +85,22 @@
                             //console.log(row.userID);
                             return [
                                 '<div class="table-icons">',
-                                    '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)" data-url="/user-detail/'+row.userID+'" data-target="#main-content" >',
+                                    '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)" data-url="/user-detail/view/'+row.userID+'" data-target="#main-content" >',
                                         '<i class="ti-image"></i>',
                                     '</a>',
-                                    '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+                                    '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)" data-url="/user-detail/edit/'+row.userID+'" data-target="#main-content">',
                                         '<i class="ti-pencil-alt"></i>',
                                     '</a>',
-                                    '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+                                    '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)" data-url="/user-detail/delete/'+row.userID+'" data-target="#main-content">',
                                         '<i class="ti-close"></i>',
                                     '</a>',
                                 '</div>',
                             ].join('');
                         }
+
+                        $(function(){
+                          $('#toolbar').initGoTo();
+
+                          $('#nav-title').text("Users");
+                        });
                     </script>
