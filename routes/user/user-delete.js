@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var auth = require('./../../modules/auth');
 
 /* POST user update or add*/
-router.post('/', function(req, res, next) {
+router.post('/',auth, function(req, res, next) {
 
 	var user = db.collection('users').findOne({userID:(req.body.userID)}, function(err, user){
 			//if user found , peform update
