@@ -6,7 +6,7 @@ $.fn.simplePost = function(url,callback,overlayTarget){
     var base = this;
     var serializeStr = base.serialize();
 
-    callback = callback || notifySuccess;
+    callback = callback || notifyOnReturn;
 
     $(overlayTarget).LoadingOverlay("show");
     $.post(url, serializeStr, callback).always(function() {
@@ -36,7 +36,7 @@ $.fn.initPost = function(callback){
 /**
 ** A Generic function to prompt response from callback
 **/
-function notifySuccess(data){
+function notifyOnReturn(data){
   //console.log(data);
   var obj = data;
   if(obj.error){

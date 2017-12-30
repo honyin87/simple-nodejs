@@ -54,9 +54,13 @@
                                     </div>
 
                                     <div class="text-center">
+                                      {{if pageMode == 'Add'}}
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Add Profile</button>
+                                      {{else pageMode == 'Edit'}}
                                         <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
-                                        <a href="#" data-url="/users" data-target="#main-content" class="btn btn-danger btn-fill btn-wd">
-                                            Cancel
+                                      {{/if}}
+                                        <a id="btnBack" href="#" data-url="/users" data-target="#main-content" class="btn btn-danger btn-fill btn-wd">
+                                            Back
                                         </a>
                                     </div>
                                     <div class="clearfix"></div>
@@ -67,6 +71,11 @@
                     <script>
                       $(function() {
                         $('.form').initGoTo();
-                        $('.form').initPost();
+                        $('.form').initPost(updateCallback);
                       });
+
+                      function updateCallback(data){
+                        notifyOnReturn(data);
+                        $('#btnBack').click();
+                      }
                     </script>
